@@ -86,3 +86,4 @@ bashcov bats test
 
 - Include bash code coverage in GitLab CI.
 - Add [additional](https://pre-commit.com/hooks.html) (relevant) pre-commit hooks.
+- Develop Bash documentation checks [here](https://github.com/TruCol/checkstyle-for-bash), and add them to this pre-commit.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 some_active_function() {
-	sum=$(expr "$1" + "$2")
-	echo $sum
+	sum=$(("$1" + "$2"))
+	echo "$sum"
 }
 
 ##################################################################
@@ -11,8 +11,8 @@ some_active_function() {
 ##################################################################
 function to_lower()
 {
-    local str="$@"
+    local str="$*"
     local output
-    output=$(tr '[A-Z]' '[a-z]'<<<"${str}")
-    echo $output
+    output=$(tr '[:upper]' '[:lower:]'<<<"${str}")
+    echo "$output"
 }

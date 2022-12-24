@@ -6,9 +6,9 @@
 ##################################################################
 function to_lower()
 {
-    local str="$@"
+    local str="$*"
     local output
-    output=$(tr '[A-Z]' '[a-z]'<<<"${str}")
-    echo $output
+    output=$(tr '[:upper:]' '[:lower:]'<<<"${str}")
+    echo "$output"
 }
 to_lower "$@"

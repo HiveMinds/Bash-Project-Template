@@ -4,6 +4,8 @@ You can use this as a starting point for a Bash/shell project with:
 
 - Unit testing
 - Continuous Integration (GitLab CI)
+- Pre-commit
+- Shellcheck
 
 ## Usage
 

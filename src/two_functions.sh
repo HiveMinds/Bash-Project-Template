@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 some_active_function() {
 	sum=$(expr "$1" + "$2")
 	echo $sum
@@ -9,7 +9,7 @@ some_active_function() {
 # Arguments:
 #   $@ -> String to convert to lower case
 ##################################################################
-function to_lower() 
+function to_lower()
 {
     local str="$@"
     local output

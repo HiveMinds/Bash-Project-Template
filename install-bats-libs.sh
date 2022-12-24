@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 mkdir -p test/libs
 
 git submodule add https://github.com/sstephenson/bats test/libs/bats

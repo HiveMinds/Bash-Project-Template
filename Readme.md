@@ -1,11 +1,18 @@
-# unit tested shell code template [![Travis Build Status](https://img.shields.io/travis/a-t-0/shell_unit_testing_template.svg)](https://travis-ci.org/a-t-0/shell_unit_testing_template)
+# Unit tested Shell/Bash code template
 
-You can use this as a starting point for a Bash/shell project with:
+[![Travis Build Status](https://img.shields.io/travis/a-t-0/shell_unit_testing_template.svg)](https://travis-ci.org/a-t-0/shell_unit_testing_template)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+You can use this as a starting point for your Bash/shell project with:
 
 - Unit testing
+- Code Coverage (100 %)
+- Pre-commit:
+  - shfmt (Auto-formatter)
+  - Shellcheck
 - Continuous Integration (GitLab CI)
-- Pre-commit
-- Shellcheck
+
+That way, you start your project in a clean, tested environment.
 
 ## Usage
 
@@ -19,7 +26,7 @@ src/./main.sh
 
 Put your unit test files (with extension .bats) in folder: `/test/`
 
-\[Context: Prerequisites\]
+### Prerequisites
 
 If still existent, first remove the bats submodules with:
 
@@ -44,7 +51,8 @@ yes | sudo gem install bashcov
 yes | sudo apt install shfmt
 ```
 
-\[Context: Pre-commit\]
+### Pre-commit
+
 Run pre-commit with:
 
 ```sh
@@ -53,7 +61,8 @@ pre-commit autoupdate
 pre-commit run --all
 ```
 
-\[Context: Tests\]
+### Tests
+
 Run the tests with:
 
 ```sh
@@ -67,7 +76,7 @@ chmod +x test.sh
 ./test.sh
 ```
 
-\[Context: Code coverage\]
+### Code coverage
 
 ```sh
 bashcov bats test
@@ -76,4 +85,4 @@ bashcov bats test
 ## How to help
 
 - Include bash code coverage in GitLab CI.
-- Add additional (relevant) pre-commit hooks.
+- Add [additional](https://pre-commit.com/hooks.html) (relevant) pre-commit hooks.

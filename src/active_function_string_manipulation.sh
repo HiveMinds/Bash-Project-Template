@@ -10,4 +10,4 @@ function to_lower() {
   output=$(tr '[:upper:]' '[:lower:]' <<<"${str}")
   echo "$output"
 }
-to_lower "$@"
+#to_lower "$@"

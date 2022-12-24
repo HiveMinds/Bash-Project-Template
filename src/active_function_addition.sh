@@ -3,4 +3,4 @@ some_active_function() {
   sum=$(("$1" + "$2"))
   echo "$sum"
 }
-some_active_function "$@"
+#some_active_function "$@"

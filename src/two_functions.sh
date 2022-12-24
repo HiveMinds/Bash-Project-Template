@@ -12,6 +12,6 @@ some_active_function() {
 function to_lower() {
   local str="$*"
   local output
-  output=$(tr '[:upper]' '[:lower:]' <<<"${str}")
+  output=$(tr '[:upper:]' '[:lower:]' <<<"${str}")
   echo "$output"
 }

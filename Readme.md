@@ -24,14 +24,39 @@ chmod +x install-bats-libs.sh
 ./install-bats-libs.sh
 ```
 
-Next, run the unit tests with:
+## Testing
+
+Put your unit test files (with extension .bats) in folder: `/test/`
+
+\[Context: Prerequisites\]
+
+```sh
+yes | sudo gem install bats
+yes | sudo gem install bashcov
+yes | sudo apt install shfmt
+```
+
+\[Context: Pre-commit\]
+Run pre-commit with:
+
+```sh
+pre-commit install
+pre-commit autoupdate
+pre-commit run --all
+```
+
+\[Context: Tests\]
 
 ```sh
 chmod +x test.sh
 ./test.sh
 ```
 
-Put your unit test files (with extension .bats) in folder: `/test/`
+\[Context: Code coverage\]
+
+```sh
+bashcov ./test.sh
+```
 
 ## How to help
 

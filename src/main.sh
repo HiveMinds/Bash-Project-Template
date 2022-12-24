@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
-echo "Hello world"
+
+say_hello() {
+  echo "Hello world"
+}
+say_hello

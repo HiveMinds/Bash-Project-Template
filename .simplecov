@@ -5,4 +5,6 @@ SimpleCov.start do
   add_filter "test/libs"
   add_filter "/.git/"
   add_filter "install-bats-libs.sh"
+  add_filter "main.sh"
+  add_filter "test.sh"
 end

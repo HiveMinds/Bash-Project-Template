@@ -9,7 +9,19 @@ You can use this as a starting point for a Bash/shell project with:
 
 ## Usage
 
-If still existent, first remain the submodules with:
+The main code can be ran with:
+
+```sh
+src/./main.sh
+```
+
+## Testing
+
+Put your unit test files (with extension .bats) in folder: `/test/`
+
+\[Context: Prerequisites\]
+
+If still existent, first remove the bats submodules with:
 
 ```sh
 git rm --cached test/libs/bats
@@ -24,11 +36,7 @@ chmod +x install-bats-libs.sh
 ./install-bats-libs.sh
 ```
 
-## Testing
-
-Put your unit test files (with extension .bats) in folder: `/test/`
-
-\[Context: Prerequisites\]
+Install:
 
 ```sh
 yes | sudo gem install bats
@@ -46,6 +54,13 @@ pre-commit run --all
 ```
 
 \[Context: Tests\]
+Run the tests with:
+
+```sh
+bats test
+```
+
+If you want to run particular tests, you could use the `test.sh` file:
 
 ```sh
 chmod +x test.sh
@@ -55,12 +70,10 @@ chmod +x test.sh
 \[Context: Code coverage\]
 
 ```sh
-bashcov ./test.sh
+bashcov bats test
 ```
 
 ## How to help
 
-Include bash code coverage in this repo such that:
-
-- it can be ran locally.
-- it can be ran in GitLab CI.
+- Include bash code coverage in GitLab CI.
+- Add additional (relevant) pre-commit hooks.

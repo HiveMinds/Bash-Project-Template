@@ -3,9 +3,8 @@
 load 'libs/bats-support/load'
 load 'libs/bats-assert/load'
 
-
 @test "running the file in /src/two_functions.sh." {
-    source ./src/two_functions.sh
-    output=$(some_active_function 9 -51)
-    ((output == -42))
+  source ./src/two_functions.sh
+  output=$(some_active_function 9 -51)
+  ((output == -42))
 }

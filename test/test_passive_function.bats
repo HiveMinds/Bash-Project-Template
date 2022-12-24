@@ -4,6 +4,6 @@ load 'libs/bats-support/load'
 load 'libs/bats-assert/load'
 
 @test "running the file in /src/passive_function.sh." {
-	run sh src/passive_function.sh
-    assert_output "hello world"
+  run sh src/passive_function.sh
+  assert_output "hello world"
 }

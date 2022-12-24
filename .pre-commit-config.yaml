@@ -44,6 +44,13 @@ repos:
     # Ensures JSON files are properly formatted.
     - id: pretty-format-json
       args: ['--autofix']
+    #- id: shfmt
+      # name: shfmt (local)
+      # language: script
+      # entry: pre_commit_hooks/shfmt
+      # types: [shell]
+      # additional_dependencies: [shfmt]
+      # exclude: ci/ansi
     # Sorts simple YAML files which consist only of top-level keys.
     - id: sort-simple-yaml
     # Removes trailing whitespaces at end of lines of .. files.
@@ -73,3 +80,9 @@ repos:
        name: check shell scripts with shellcheck
        files: ^.*\.(sh|bash|ksh)$
        types: []
+
+ - repo: https://github.com/syntaqx/git-hooks
+   rev: v0.0.17
+   hooks:
+    - id: shfmt
+      args: ["-l", "-i", "2", "-ci", "-w"]

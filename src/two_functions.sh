@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 some_active_function() {
-	sum=$(("$1" + "$2"))
-	echo "$sum"
+  sum=$(("$1" + "$2"))
+  echo "$sum"
 }
 
 ##################################################################
@@ -9,10 +9,9 @@ some_active_function() {
 # Arguments:
 #   $@ -> String to convert to lower case
 ##################################################################
-function to_lower()
-{
-    local str="$*"
-    local output
-    output=$(tr '[:upper]' '[:lower:]'<<<"${str}")
-    echo "$output"
+function to_lower() {
+  local str="$*"
+  local output
+  output=$(tr '[:upper]' '[:lower:]' <<<"${str}")
+  echo "$output"
 }

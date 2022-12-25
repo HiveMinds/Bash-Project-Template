@@ -28,15 +28,7 @@ Put your unit test files (with extension .bats) in folder: `/test/`
 
 ### Prerequisites
 
-If still existent, first remove the bats submodules with:
-
-```sh
-git rm --cached test/libs/bats
-git rm --cached test/libs/bats-support
-git rm --cached test/libs/bats-assert
-```
-
-Then (re)-install the required submodules with:
+(Re)-install the required submodules with:
 
 ```sh
 chmod +x install-bats-libs.sh
@@ -49,6 +41,8 @@ Install:
 sudo gem install bats
 sudo gem install bashcov
 sudo apt install shfmt -y
+pre-commit install
+pre-commit autoupdate
 ```
 
 ### Pre-commit
@@ -56,8 +50,6 @@ sudo apt install shfmt -y
 Run pre-commit with:
 
 ```sh
-pre-commit install
-pre-commit autoupdate
 pre-commit run --all
 ```
 

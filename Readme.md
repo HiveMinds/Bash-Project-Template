@@ -19,7 +19,7 @@ That way, you start your project in a clean, tested environment.
 The main code can be ran with:
 
 ```sh
-src/./main.sh
+src/main.sh
 ```
 
 ## Testing
@@ -46,9 +46,9 @@ chmod +x install-bats-libs.sh
 Install:
 
 ```sh
-yes | sudo gem install bats
-yes | sudo gem install bashcov
-yes | sudo apt install shfmt
+sudo gem install bats
+sudo gem install bashcov
+sudo apt install shfmt -y
 ```
 
 ### Pre-commit
@@ -86,4 +86,6 @@ bashcov bats test
 
 - Include bash code coverage in GitLab CI.
 - Add [additional](https://pre-commit.com/hooks.html) (relevant) pre-commit hooks.
-- Develop Bash documentation checks [here](https://github.com/TruCol/checkstyle-for-bash), and add them to this pre-commit.
+- Develop Bash documentation checks
+  [here](https://github.com/TruCol/checkstyle-for-bash), and add them to this
+  pre-commit.

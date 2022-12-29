@@ -1,4 +1,4 @@
-# Unit tested Shell/Bash code template
+# Unit tested Bash project template with Pre-commit
 
 [![Travis Build Status](https://img.shields.io/travis/a-t-0/shell_unit_testing_template.svg)](https://travis-ci.org/a-t-0/shell_unit_testing_template)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

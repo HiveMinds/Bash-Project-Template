@@ -1,0 +1,8 @@
+unit_test:
+    stage: test
+    script:
+        - apk update && apk add bash
+        - apk add git # Default docker image uses Alpine iso Ubuntu, hence apk.
+        - chmod +x *.sh
+        - ./install-bats-libs.sh
+        - bash ./test.sh

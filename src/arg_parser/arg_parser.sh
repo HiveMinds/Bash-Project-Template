@@ -3,7 +3,12 @@ POSITIONAL_ARGS=()
 
 
 # Specify default argument values.
-org_name='false'
+apply_certs='false'
+check_http='false'
+check_https='false'
+generate_certs_flag='false'
+project_name_flag='false'
+port_flag='false'
 
 # print the usage if no arguments are given
 [ $# -eq 0 ] && { print_usage; exit 1; }
@@ -30,25 +35,21 @@ while [[ $# -gt 0 ]]; do
     -n|--project-name)
       project_name_flag='true'
       project_name="$2"
-      assert_is_non_empty_string ${project_name}
+      assert_is_non_empty_string "${project_name}"
       shift # past argument
       shift
       ;;
     -p|--port)
       port_flag='true'
       port="$2"
-      assert_is_non_empty_string ${project_name}
+      assert_is_non_empty_string "${project_name}"
       shift # past argument
       shift
       ;;
-    -*|--*)
+    -*)
       echo "Unknown option $1"
       print_usage
       exit 1
-      ;;
-    *)
-      POSITIONAL_ARGS+=("$1") # save positional arg
-      shift # past argument
       ;;
   esac
 done

@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+source src/arg_parser/arg_parser.sh
+source src/arg_parser/process_args.sh
+source src/arg_parser/print_usage.sh
 
 # Get application name/dir from CLI.
 
@@ -16,7 +20,14 @@
 
 # Verify the https works.
 
+# print the usage if no arguments are given
+[ $# -eq 0 ] && {
+  print_usage
+  exit 1
+}
+parse_args "$@"
+
 say_hello() {
-  echo "Hello world"
+  echo "Done parsing args. Hello world."
 }
 say_hello

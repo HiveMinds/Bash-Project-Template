@@ -71,6 +71,7 @@ repos:
    hooks:
      - id: shellcheck
        name: check shell scripts with shellcheck
+       args: ["-x"]
        files: ^.*\.(sh|bash|ksh)$
        types: []
 
